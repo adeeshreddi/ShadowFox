@@ -44,3 +44,44 @@ After comparing all three, I selected the best one based on the lowest RMSE.
 🚀 How to Run It
 
 Just open the notebook in Google Colab or Jupyter Notebook and run it from top to bottom.
+
+# ShadowFox — Car Selling Price Prediction and Analysis
+
+I built this project to estimate used car selling prices using a regression model. The dataset includes features like fuel type, years of service, showroom price, number of previous owners, kilometers driven, seller type, and transmission. All these help understand how a car’s value changes across different situations.
+
+## 🔍 What I Did
+
+I followed a full ML pipeline so the model learns properly and can give dependable predictions.
+
+### Data Preprocessing
+• Loaded and cleaned the dataset  
+• Handled missing values  
+• Scaled numerical features  
+• Encoded categorical features  
+• Used a clean preprocessing setup so everything stays consistent  
+
+### Exploratory Analysis
+• Looked at distributions and patterns  
+• Checked correlations  
+• Saved key visualizations for understanding price trends  
+
+### Model Training
+I used a train–test split and trained the model inside a single pipeline so preprocessing and training happen together. This keeps the workflow simple and avoids leakage.
+
+### Model Evaluation
+For the trained model, I calculated:  
+• R² Score  
+• RMSE  
+• MAE  
+
+I also plotted Actual vs Predicted values to understand how well the model is performing.
+
+### Final Selection
+After comparing performance metrics, I chose the best model based on the highest R² and lowest RMSE. I also built a simple prediction function you can use to test your own inputs.
+
+## 📁 Files Included
+• ShadowFox_2.ipynb — full notebook with all steps  
+• Any saved visualizations generated during the workflow  
+
+## 🚀 How to Run It
+Open the notebook in Google Colab or Jupyter Notebook and run it from top to bottom. The final cell includes the prediction function that lets you try custom values.
