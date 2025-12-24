@@ -132,7 +132,7 @@ Created sliding window sequences for next-character prediction
 Converted data into PyTorch tensors
 
 
-#🤖 Model Training
+# 🤖 Model Training
 
 Trained for 200 epochs
 
