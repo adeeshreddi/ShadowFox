@@ -85,3 +85,140 @@ After comparing performance metrics, I chose the best model based on the highest
 
 ## 🚀 How to Run It
 Open the notebook in Google Colab or Jupyter Notebook and run it from top to bottom. The final cell includes the prediction function that lets you try custom values.
+# ShadowFox — LSTM Language Model Implementation and Analysis 🧠📜
+
+This project documents the implementation, training, and analysis of a character-level Language Model using an LSTM (Long Short-Term Memory) network built from scratch in PyTorch. The objective is to understand how recurrent neural networks capture context in sequential text data and to analyze their strengths and limitations on small datasets.
+Instead of using pre-trained models, this project focuses on fundamentals by training an LSTM on a simple corpus, making the learning process transparent and interpretable.
+# 🎯 Objective
+
+-Build a basic language model using LSTM
+
+-Understand short-term vs long-term context handling
+
+-Analyze text generation behavior
+
+-Study how dataset size and sequence length affect performance
+# 🧱 Model Overview
+
+Architecture:
+
+Embedding Layer
+
+LSTM Layer
+
+Fully Connected Output Layer
+
+Model Type: Character-level Language Model
+
+Framework: PyTorch
+
+Loss Function: Cross-Entropy Loss
+
+Optimizer: Adam (learning rate = 0.005)
+
+This setup allows the model to predict the next character given a sequence of characters.
+# 🧹 Data Preparation
+
+Used a small, hardcoded text corpus
+
+Repeated the corpus to increase effective training size
+
+Built a character vocabulary
+
+Encoded characters as integers
+
+Created sliding window sequences for next-character prediction
+
+Converted data into PyTorch tensors
+
+
+#🤖 Model Training
+
+Trained for 200 epochs
+
+Tracked training loss across epochs
+
+Observed steady convergence, indicating effective learning
+
+No overfitting observed due to limited data size
+
+A training loss curve was plotted to visualize convergence behavior 
+
+
+# ✍️ Text Generation and Exploration
+
+A text generation function was implemented to evaluate model behavior using different prompts and temperature settings.
+
+Observations:
+
+Strong performance on short-term context
+
+Generates coherent phrases similar to training data
+
+Struggles with long-range dependencies
+
+Tends to repeat patterns due to small corpus size
+
+Limited creativity because of character-level modeling
+
+# 🔬 Research Questions Explored
+
+How effectively does the LSTM handle short vs long contexts?
+
+Strong for short sequences, weak for long dependencies
+
+What are the limitations in creativity and generalization?
+
+Model lacks true creativity and struggles with out-of-domain prompts
+
+How does dataset size impact performance?
+
+Smaller datasets lead to higher loss and repetitive outputs
+
+These experiments highlight why modern language models rely on large datasets and attention-based architectures.
+
+# 📊 Visualization
+
+Training loss curve plotted across epochs
+
+Shows rapid early learning followed by gradual convergence
+
+Demonstrates diminishing returns typical of small datasets
+
+# 🧠 Key Learnings
+
+Gained hands-on experience building an LSTM from scratch
+
+Understood how sequence length affects contextual learning
+
+Learned why LSTMs struggle with long-range dependencies
+
+Connected classical RNN-based LMs to modern transformer-based models
+
+Practiced structured experimentation and analysis in NLP
+
+# 🚀 How to Run
+
+Open the notebook in Google Colab or Jupyter Notebook
+
+Run cells sequentially from top to bottom
+
+Experiment with:
+
+Sequence length
+
+Temperature values
+
+Custom text prompts
+
+# 🔮 Future Improvements
+
+Train on a larger and more diverse dataset
+
+Move from character-level to word-level modeling
+
+Introduce attention mechanisms
+
+Compare performance with Transformer-based models
+
+
